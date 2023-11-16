@@ -1,0 +1,76 @@
+\fancyhead{}
+\fancyfoot{}
+\cfoot{\thepage}
+
+\lhead{Herramientas Utilizadas}
+
+\chapter{Herramientas Utilizadas}
+
+Se explicarán las razones fundamentales para optar por las distintas herramientas que incluyen la comunicación entre el servidor y nodo, el protocolo de comunicación,  el lenguaje de programación, base de datos y visualización de los datos recolectados.
+
+\section{LoRaWAN}
+Long Range Wide Area Network \cite{gutierrez2011aplicacion} es un protocolo de comunicación y arquitectura de red diseñado para redes inalámbricas de área amplia (WAN) con el objetivo de conectar dispositivos de Internet de las Cosas (IoT) a la internet de manera eficiente, segura y a bajo costo. LoRaWAN utiliza la tecnología de modulación LoRa (Long Range) para permitir la comunicación a largas distancias con un bajo consumo de energía, lo que lo hace ideal para dispositivos IoT que necesitan una vida útil prolongada de la batería.
+\begin{itemize}
+    \item \textbf{Largo Alcance:} LoRaWAN puede proporcionar cobertura a distancias de varios kilómetros, incluso en áreas urbanas densas o en entornos rurales.
+    \item \textbf{Bajo Consumo de Energía:} Los dispositivos conectados a una red LoRaWAN pueden operar durante años con una sola batería, gracias a su eficiencia energética.
+    \item \textbf{Seguridad:} Incluye características de seguridad robustas, incluyendo el cifrado de extremo a extremo, la autenticación de dispositivos y la integridad de los datos.
+    \item \textbf{Comunicación Bidireccional:} LoRaWAN permite la comunicación bidireccional entre los dispositivos y la red, lo que significa que los dispositivos no solo pueden enviar datos, sino también recibir mensajes.
+\end{itemize}
+
+\section{MQTT}
+MQTT (Message Queuing Telemetry Transport) \cite{gutierrez2011aplicacion} es un protocolo de mensajería ligero y eficiente diseñado para la comunicación en dispositivos de Internet de las Cosas (IoT). Es particularmente útil en situaciones donde los recursos de red son limitados o los dispositivos tienen capacidades de hardware restringidas. MQTT opera sobre el protocolo TCP/IP y es conocido por su simplicidad y eficiencia en la transmisión de datos.
+\begin{itemize}
+    \item \textbf{Modelo de Publicación/Suscripción:} utiliza un modelo de publicación/suscripción, donde los dispositivos pueden publicar mensajes en tópicos y suscribirse a tópicos para recibir mensajes. Esto permite una comunicación eficiente y desacoplada entre los dispositivos.
+    \item \textbf{Broker MQTT:} El broker es el componente central en una red MQTT. Es responsable de recibir todos los mensajes, filtrarlos, decidir quién está interesado en ellos y luego enviar el mensaje a todos los clientes suscritos.
+    \item \textbf{Retención de Mensajes:}MQTT permite retener un mensaje en un tópico para que sea enviado inmediatamente a cualquier cliente que se suscriba a ese tópico.
+    \item \textbf{Eficiente:}  MQTT tiene una sobrecarga de protocolo muy baja, lo que lo hace adecuado para redes con ancho de banda limitado.
+\end{itemize}
+
+\section{The Things Network}
+The Things Network \cite{gutierrez2011aplicacion} es una red global y de código abierto para dispositivos conectados a Internet a través de la tecnología LoRaWAN (Long Range Wide Area Network). 
+Proporciona una infraestructura que facilita la conexión de dispositivos IoT a Internet. Los usuarios pueden contribuir a la red conectando sus propios gateways LoRaWAN, que actúan como puentes entre los dispositivos IoT y la red de Internet. Esto crea una red colaborativa y descentralizada que permite a los dispositivos IoT comunicarse y transmitir datos a través de largas distancias.
+\begin{itemize}
+    \item \textbf{Acceso Abierto:} Cualquiera puede unirse a la red y contribuir conectando un gateway o utilizando la red para conectar dispositivos IoT.
+    \item \textbf{Comunidad Activa:} The Things Network cuenta con una comunidad activa de desarrolladores, empresas y entusiastas que contribuyen al crecimiento y mejora de la red.
+    \item \textbf{Cobertura Global:} Gracias a la contribución de gateways por parte de usuarios de todo el mundo, The Things Network tiene la capacidad de proporcionar cobertura en una amplia variedad de ubicaciones.
+    \item \textbf{Bajo Costo:} Al ser una red de código abierto y colaborativa, los costos asociados con la conexión de dispositivos a la red pueden ser significativamente más bajos en comparación con otras soluciones de conectividad IoT.
+\end{itemize}
+
+\section{Amazon Web Services}
+Amazon Web Services también conocido como AWS \cite{gutierrez2011aplicacion} es la plataforma de servicios en la nube más popular y ampliamente utilizada en todo el mundo. Proporciona una amplia variedad de servicios de infraestructura y plataforma en la nube donde ofrece más de 200 servicios integrales de centros de datos a nivel global, algunos de ellos son: poder de cómputo, almacenamiento, bases de datos, análisis, redes, herramientas para desarrolladores, herramientas de gestión, IoT (Internet de las Cosas), seguridad y aplicaciones empresariales. Estos servicios ayudan a las empresas a moverse más rápido, escalar y reducir costos de TI(Tecnología de la Información).
+
+\section{AWS IoT Core}
+Es un servicio de Amazon Web Services para Internet de las Cosas(IoT) \cite{gutierrez2011aplicacion}.
+Este es el servicio central que permite conectar dispositivos IoT a la nube de AWS de forma segura y eficiente. AWS IoT Core soporta millones de dispositivos y billones de mensajes, y puede procesar y enrutar esos mensajes a endpoints de AWS y a otros dispositivos de forma fiable y segura.
+
+\section{Amazon Timestream}
+Timestream \cite{gutierrez2011aplicacion} es un servicio de base de datos no relacional(NoSQL) y de series temporales completamente gestionado que está diseñado para escalar de forma eficiente y rentable con el tiempo. Las series temporales son datos que se miden y registran a lo largo del tiempo. Timestream está optimizado para manejar grandes volúmenes de datos de series temporales y proporciona funciones para el procesamiento y análisis de estos datos.
+\begin{itemize}
+    \item \textbf{Gestión del Tiempo y Retención:} Gestiona automáticamente la retención de datos y mueve los datos entre diferentes niveles de almacenamiento (memoria y disco) en función de políticas definidas por el usuario, optimizando así los costos de almacenamiento en Amazon Web Services.
+    \item \textbf{Consultas Eficientes:} El servicio está optimizado para consultas de series temporales, permitiendo a los usuarios realizar análisis complejos y agregaciones de datos de forma rápida y eficiente.
+    \item \textbf{Seguridad:} Proporciona funciones de seguridad robustas, incluyendo el cifrado de datos en tránsito y en reposo, y la capacidad de controlar el acceso a los datos mediante políticas de IAM (Identity and Access Management).
+ 
+\end{itemize}
+
+\section{Amazon Grafana}
+Amazon Grafana \cite{E_Twahirwa} \cite{knuth} \cite{A_Abd} \cite{A_Evelyn}\cite{A_Rana}\cite{A_Simo}\cite{D_Fermin}\cite{D_Ochoa}\cite{G_Jota}\cite{H_Paz}\cite{H_Siachoque}\cite{LJ_Chen}\cite{M_Rodenas}\cite{OMS}\cite{Y_Simmhan} es una plataforma de análisis y monitoreo de código abierto que es ampliamente utilizada para visualizar y analizar métricas en tiempo real y datos de series temporales. Proporciona herramientas para crear dashboards interactivos y personalizables que permiten a los usuarios visualizar, realizar consultas y entender sus datos de manera más efectiva.
+\begin{itemize}
+     \item \textbf{Visualización de Datos:} Permite crear una variedad de visualizaciones de datos, incluyendo gráficos de líneas, barras, diagramas de dispersión, y más. Estas visualizaciones ayudan a los usuarios a identificar tendencias, patrones y anomalías en sus datos.
+    \item \textbf{Dashboards Personalizables:} Incluye múltiples paneles de visualización, cada uno configurado para mostrar datos específicos. Los dashboards pueden ser compartidos y colaborativos, permitiendo a los equipos trabajar juntos en el análisis de datos.
+    \item \textbf{Comunidad y Soporte:} Al ser una herramienta de código abierto, Grafana cuenta con una comunidad activa de usuarios y desarrolladores que contribuyen a su desarrollo y proporcionan soporte.
+    \item \textbf{Integración y Extensibilidad:} Se puede integrar con otras herramientas y servicios, y su funcionalidad puede ser extendida a través de plugins y API.
+   
+\end{itemize}
+
+
+
+%Muestra de como insertar una foto
+%\begin{figure}[H]
+%\begin{minipage}{\textwidth}
+%\begin{center}
+%\includegraphics[scale=.4]{./capitulo_03/tablazoo}
+%\caption{Tabla de modelos de detección previamente entrenados en el conjunto de datos COCO %2017.} \label{fig:tablazoo}
+%\end{center}
+%\end{minipage}
+%\end{figure}
+
